@@ -1,0 +1,487 @@
+/*	20130624: modification des marges de l'élément pre
+	20130713: modification police principale (également pout input et textarea)
+	20120706: simplification
+	20120701	
+	
+	*/
+
+html,input,textarea {
+	font-family: Tahoma,Verdana,Arial,Helvetica,Sans-Serif;
+	font-size: 10pt; /* 13px; */
+	line-height: 1.1; /* 1.2; */
+	color: #000000;
+}
+
+body,pre {
+	margin: 0px;
+}
+
+img {
+	border: 0px;
+	float: none; /* left; */
+}
+
+/* table {
+	display: inline-table;
+} */
+
+.b,.B,.bold {
+	font-weight: bold;
+}
+
+.i,.I,.italic {
+	font-style: italic;
+}
+
+.u,.U,.underline {
+	text-decoration: underline;
+}
+.s,.S,.strike {
+	text-decoration: line-through;
+}
+
+.n,.N,.normal {
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+}
+
+.super {
+	vertical-align: super;
+}
+
+.sub {
+	vertical-align: sub;
+}
+
+.l,.L,.left {
+	text-align: left;
+}
+
+.c,.C,.center {
+	text-align: center;
+}
+
+.r,.R,.right {
+	text-align: right;
+}
+
+.j,.J,.justify {
+	text-align: justify;
+}
+
+.Arial { 
+	font-family: Arial,Helvetica,Sans-Serif;
+}
+
+.Verdana {
+	font-family: Verdana,Arial,Helvetica,Sans-Serif;
+}
+
+.Tahoma {
+	font-family: Tahoma,Verdana,Arial,Helvetica,Sans-Serif;
+}
+
+.ComicSansMS { 
+	font-family: Comic Sans MS,Sans-Serif;
+}
+
+.CourierNew { 
+	font-family: Courier New,Courier;
+}
+
+.LucidaCalligraphy { 
+	font-family: Lucida Calligraphy;
+}
+
+.Papyrus { 
+	font-family: Papyrus,Verdana,Arial,Helvetica,Sans-Serif;
+}
+
+.Wingdings { 
+	font-family: Wingdings,Verdana,Arial,Helvetica,Sans-Serif;
+}
+
+.OCRB {
+	font-family: OCR_B,Courier New,Courier;
+}
+
+.FS_40pt { 
+	font-size: 4.0pt;
+}
+
+.FS_45pt { 
+	font-size: 4.5pt;
+}
+
+.FS_50pt { 
+	font-size: 5.0pt;
+}
+
+.FS_55pt { 
+	font-size: 5.5pt;
+}
+
+.FS_60pt { 
+	font-size: 6.0pt;
+}
+
+.FS_65pt { 
+	font-size: 6.5pt;
+}
+
+.FS_70pt { 
+	font-size: 7.0pt;
+}
+
+.FS_75pt { 
+	font-size: 7.5pt;
+}
+
+.FS_80pt { 
+	font-size: 8.0pt;
+}
+
+.FS_85pt { 
+	font-size: 8.5pt;
+}
+
+.FS_90pt { 
+	font-size: 9.0pt;
+}
+
+.FS_95pt { 
+	font-size: 9.5pt;
+}
+
+.FS_100pt { 
+	font-size: 10.0pt;
+}
+
+.FS_110pt { 
+	font-size: 11.0pt;
+}
+
+.FS_120pt { 
+	font-size: 12.0pt;
+}
+
+.FS_140pt { 
+	font-size: 14.0pt;
+}
+
+.FS_160pt { 
+	font-size: 16.0pt;
+}
+
+.FS_180pt { 
+	font-size: 18.0pt;
+}
+
+.FS_200pt { 
+	font-size: 20.0pt;
+}
+
+.FS_220pt { 
+	font-size: 22.0pt;
+}
+
+.FS_240pt { 
+	font-size: 24.0pt;
+}
+
+.FS_260pt { 
+	font-size: 26.0pt;
+}
+
+.FS_280pt { 
+	font-size: 28.0pt;
+}
+
+.FS_360pt { 
+	font-size: 36.0pt;
+}
+
+.FS_480pt { 
+	font-size: 48.0pt;
+}
+
+.FS_720pt { 
+	font-size: 72.0pt;
+}
+
+.LH_10 {
+	line-height: 1.0;
+}
+
+.LH_11 {
+	line-height: 1.1;
+}
+
+.LH_12 {
+	line-height: 1.2;
+}
+
+.LH_13 {
+	line-height: 1.3;
+}
+
+.LH_14 {
+	line-height: 1.4;
+}
+
+.LH_15 {
+	line-height: 1.5;
+}
+
+.LH_20 {
+	line-height: 2.0;
+}
+
+.C_000000,.black { /*black*/
+	color: #000000;
+}
+
+.C_FF0000,.red { /*red*/
+	color: #FF0000;
+}
+
+.C_008000,.green { /*green*/
+	color: #008000;
+}
+
+.C_00FF00,.lime { /*lime*/
+	color: #00FF00;
+}
+
+.C_0000FF,.blue { /*blue*/
+	color: #0000FF;
+}
+
+.C_777777,.gray50 { /*gray 50% reflection*/
+	color: #777777;
+}
+
+.C_808080,.gray,.grey { /*gray*/
+	color: #808080;
+}
+
+.C_FFFFFF,.white { /*white*/
+	color: #FFFFFF;
+}
+
+.C_00FFFF,.cyan { /*cyan*/
+	color: #00FFFF;
+}
+
+.C_FF00FF,.magenta { /*magenta*/
+	color: #FF00FF;
+}
+
+.C_FFFF00,.yellow { /*yellow*/
+	color: #FFFF00;
+}
+
+.Arial0 { 
+	font-family: Arial,Helvetica,Sans-Serif;
+	font-size: 9px;
+	line-height: 10px;
+}
+
+.Arial1 { /* Publisher Arial 8 */
+	font-family: Arial,Helvetica,Sans-Serif;
+	font-size: 11px;
+	line-height: 12px;
+}
+
+.Arial2 { /* Publisher Arial 10 */
+	font-family: Arial,Helvetica,Sans-Serif;
+	font-size: 13px;
+	line-height: 16px;
+}
+
+.Arial3 { /* Publisher Arial 12 */
+	font-family: Arial,Helvetica,Sans-Serif;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.Arial4 { /* Publisher Arial 14 */
+	font-family: Arial,Helvetica,Sans-Serif;
+	font-size: 21px;
+	line-height: 24px;
+}
+
+.Arial5 { /* Publisher Arial 18 */
+	font-family: Arial,Helvetica,Sans-Serif;
+	font-size: 27px;
+	line-height: 30px;
+}
+
+.Arial6 { /* Publisher Arial 24 */
+	font-family: Arial,Helvetica,Sans-Serif;
+	font-size: 32px;
+	line-height: 36px;
+}
+
+.Arial7 { /* Publisher Arial 36 */
+	font-family: Arial,Helvetica,Sans-Serif;
+	font-size: 48px;
+	line-height: 54px;
+}
+
+.Arial8 { /* Publisher Arial 48 */
+	font-family: Arial,Helvetica,Sans-Serif;
+	font-size: 64px;
+	line-height: 72px;
+}
+
+.Arial9 { /* Publisher Arial 72 */
+	font-family: Arial,Helvetica,Sans-Serif;
+	font-size: 96px;
+	line-height: 108px;
+}
+
+.Verdana0 {
+	font-family: Verdana,Arial,Helvetica,Sans-Serif;
+	font-size: 9px;
+	line-height: 11px;
+}
+
+.Verdana1 { /* Publisher Verdana 8 */
+	font-family: Verdana,Arial,Helvetica,Sans-Serif;
+	font-size: 11px;
+	line-height: 13px;
+}
+
+.Verdana2 { /* Publisher Verdana 10 */
+	font-family: Verdana,Arial,Helvetica,Sans-Serif;
+	font-size: 13px;
+	line-height: 16px;
+}
+
+.Verdana3 { /* Publisher Verdana 12 */
+	font-family: Verdana,Arial,Helvetica,Sans-Serif;
+	font-size: 16px;
+	line-height: 21px;
+}
+
+.Verdana4 { /* Publisher Verdana 14 */
+	font-family: Verdana,Arial,Helvetica,Sans-Serif;
+	font-size: 21px;
+	line-height: 24px;
+}
+
+.Verdana5 { /* Publisher Verdana 18 */
+	font-family: Verdana,Arial,Helvetica,Sans-Serif;
+	font-size: 27px;
+	line-height: 30px;
+}
+
+.Verdana6 { /* Publisher Verdana 24 */
+	font-family: Verdana,Arial,Helvetica,Sans-Serif;
+	font-size: 32px;
+	line-height: 36px;
+}
+
+.Verdana7 { /* Publisher Verdana 36 */
+	font-family: Verdana,Arial,Helvetica,Sans-Serif;
+	font-size: 48px;
+	line-height: 54px;
+}
+
+.Verdana8 { /* Publisher Verdana 48 */
+	font-family: Verdana,Arial,Helvetica,Sans-Serif;
+	font-size: 64px;
+	line-height: 72px;
+}
+
+.Verdana9 { /* Publisher Verdana 72 */
+	font-family: Verdana,Arial,Helvetica,Sans-Serif;
+	font-size: 96px;
+	line-height: 108px;
+}
+
+.ComicSansMS0 { /* (Publisher Comic Sans MS 8) */
+	font-family: Comic Sans MS,Sans-Serif;
+	font-size: 9px;
+	line-height: 13px;
+}
+
+.ComicSansMS1 { /* Publisher Comic Sans MS 9 */
+	font-family: Comic Sans MS,Sans-Serif;
+	font-size: 11px;
+	line-height: 16px;
+}
+
+.ComicSansMS2 { /* Publisher Comic Sans MS 10 */
+	font-family: Comic Sans MS,Sans-Serif;
+	font-size: 13px;
+	line-height: 19px;
+}
+
+.ComicSansMS3 { /* Publisher Comic Sans MS 12 */
+	font-family: Comic Sans MS,Sans-Serif;
+	font-size: 16px;
+	line-height: 23px;
+}
+
+.ComicSansMS4 { /* Publisher Comic Sans MS 14 */
+	font-family: Comic Sans MS,Sans-Serif;
+	font-size: 21px;
+	line-height: 30px;
+}
+
+.ComicSansMS5 { /* Publisher Comic Sans MS 20 */
+	font-family: Comic Sans MS,Sans-Serif;
+	font-size: 27px;
+	line-height: 38px;
+}
+
+.ComicSansMS6 { /* Publisher Comic Sans MS 28 */
+	font-family: Comic Sans MS,Sans-Serif;
+	font-size: 32px;
+	line-height: 45px;
+}
+
+.ComicSansMS7 { /* Publisher Comic Sans MS 36 */
+	font-family: Comic Sans MS,Sans-Serif;
+	font-size: 50px;
+	line-height: 67px;
+}
+
+.ComicSansMS8 { /* (Publisher Comic Sans MS 48) */
+	font-family: Comic Sans MS,Sans-Serif;
+	font-size: 66px;
+	line-height: 75px;
+}
+
+.ComicSansMS9 { /* (Publisher Comic Sans MS 72) */
+	font-family: Comic Sans MS,Sans-Serif;
+	font-size: 99px;
+	line-height: 113px;
+}
+
+.CourierNew0 { 
+	font-family: Courier New,Courier;
+	font-size: 9px;
+	line-height: 10px;
+}
+
+.CourierNew1 { /* Publisher Courier New 8 */
+	font-family: Courier New,Courier;
+	font-size: 11px;
+	line-height: 12px;
+}
+
+.CourierNew2 { /* Publisher Courier New 10 */
+	font-family: Courier New,Courier;
+	font-size: 13px;
+	line-height: 16px;
+}
+
+.OCRB10 {
+	font-family: OCR_B,Courier New,Courier;
+	font-size: 12pt;
+	line-height: 1.1;
+}
