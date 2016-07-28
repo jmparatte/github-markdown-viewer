@@ -21,30 +21,40 @@ headers_set( ['NO_CACHE', 'ALLOW_ORIGIN_ALL', 'TEXT_HTML'], true );
 
 //------------------------------------------------------------------------------
 
-$return = ain(
-	$_GET, 'return', ain(
-		$_POST, 'return', NULL
+$urlmd = ain (
+	$_GET, 'urlmd', ain (
+		$_POST, 'urlmd', NULL
 	)
 );
 
-if (!is_null($return)) $return = strtolower( $return );
-
-$filename = ain(
-	$_GET, 'filename', ain(
-		$_POST, 'filename', NULL
+$return = fain (
+	'strtolower', $_GET, 'return', fain (
+		'strtolower', $_POST, 'return', NULL
 	)
 );
 
-$markdown = ain(
-	$_GET, 'markdown', ain(
-		$_POST, 'markdown', NULL
-	)
-);
+if (!is_null($urlmd)) {
+	$filename = basename($urlmd);
+	$markdown = file_get_contents($urlmd);
+}
+else {
 
-if (is_null($filename) && is_null($markdown))
-{
-	$filename = 'README.md';
-	$markdown = load($filename);
+	$filename = ain (
+		$_GET, 'filename', ain(
+			$_POST, 'filename', NULL
+		)
+	);
+
+	$markdown = ain (
+		$_GET, 'markdown', ain(
+			$_POST, 'markdown', NULL
+		)
+	);
+
+	if (is_null($filename) && is_null($markdown)) {
+		$filename = 'README.md';
+		$markdown = load($filename);
+	}
 }
 
 //------------------------------------------------------------------------------

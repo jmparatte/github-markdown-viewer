@@ -3,13 +3,15 @@
 Usage:
 
 ```http
-http://md.paratte.ch/github-markdown-parser.php?return=<return>&filename=<filename>&markdown=<markdown>
+http://md.paratte.ch/github-markdown-parser.php?urlmd=<urlmd>&return=<return>&filename=<filename>&markdown=<markdown>
 ```
 
-> `<return>` value controls which parts of the _markdown_ content are returned.
+> `<urlmd>` loads a _markdown_ file and _HTML_ encodes it.
+
+> `<return>` value controls which parts of the _markdown_ contents are returned.
 Possible values are: `all|begin|content|end`.
 
-> `<filename>` text is inserted as header of the _markdown_ content.
+> `<filename>` text is written in title of the _markdown_ content.
 
 > `<markdown>` text is parsed as _markdown_ content and _HTML_ encoded.
 
