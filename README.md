@@ -3,23 +3,26 @@
 Usage:
 
 ```http
-http://md.paratte.ch/github-markdown-parser.php?urlmd=<urlmd>&return=<return>&filename=<filename>&markdown=<markdown>
+http://md.paratte.ch/github-markdown-parser.php?urlmd=<urlmd>&return=<return>&title=<title>&markdown=<markdown>
 ```
 
-> `<urlmd>` loads a _markdown_ file and _HTML_ encodes it.
+> `<urlmd>` gets a _markdown_ file and _HTML_ encodes it.
+See also `<markdown>` argument.
 
-> `<return>` value controls which parts of the _markdown_ contents are returned.
+> `<return>` controls which parts are returned.
 Possible values are: `all|begin|content|end`.
 
-> `<filename>` text is written in title of the _markdown_ content.
+> `<title>` is written at top of the _markdown_ content.
 
 > `<markdown>` text is parsed as _markdown_ content and _HTML_ encoded.
 
-Fonction: This _HTML_ page parses the _markdown_ content and returns it as _HTML_ encoded.
+Fonction: This _HTML_ page parses a _markdown_ content and returns it as an _HTML_ encoded content.
 
-Note: Arguments can be sent by `GET` or `POST` method.
+Note 1: Arguments can be sent by `GET` or `POST` method.
 `GET` method is prioritized over `POST`.
 `POST` method is mandatory for long _markdown_ content.
+
+Note 2: `<urlmd>` argument is prioritized over `<markdown>` argument.
 
 
 
@@ -31,6 +34,6 @@ Usage:
 http://md.paratte.ch/github-markdown-viewer.php
 ```
 
-Fonction: This _HTML_ page asks for a _markdown_ filename and displays it.
+Fonction: This _HTML_ page asks for a local _markdown_ filename content and displays it.
 
-Note: Due to _JavaScript_ security restrictions, the _HTML_ page can't receive the _filename_ argument.
+Note: Due to _JavaScript_ security restrictions, _HTML_ pages can't open any files other than of `<input type="file"...>` elements.

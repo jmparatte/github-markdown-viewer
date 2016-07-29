@@ -13,7 +13,7 @@ include( $_SERVER['DOCUMENT_ROOT'].'/Parsedown.php' );
 ?>
 <?php
 
-echo( file_get_contents( STR_PROTOCOL.SERVER_NAME.STR_PORT.'/github-markdown-parser.php?return=begin&filename='.SCRIPT_FILE ) );
+echo( file_get_contents( STR_PROTOCOL.SERVER_NAME.STR_PORT.'/github-markdown-parser.php?return=begin&title='.SCRIPT_FILE ) );
 
 ?>
 
@@ -29,7 +29,7 @@ function markdown_display(html)
 	element.innerHTML = html;
 }
 
-function markdown_parse_display(filename, markdown)
+function markdown_parse_display(title, markdown)
 {
 	var xhttp = new XMLHttpRequest();
 
@@ -41,7 +41,7 @@ function markdown_parse_display(filename, markdown)
 		}
 	};
 
- 	xhttp.open('POST', 'github-markdown-parser.php' + '?' + ('return=content') + '&' + ('filename='+urlencode(filename)), true);
+ 	xhttp.open('POST', 'github-markdown-parser.php' + '?' + ('return=content') + '&' + ('title='+urlencode(title)), true);
 
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 

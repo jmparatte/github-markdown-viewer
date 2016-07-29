@@ -34,14 +34,14 @@ $return = fain (
 );
 
 if (!is_null($urlmd)) {
-	$filename = basename($urlmd);
+	$title = basename($urlmd);
 	$markdown = file_get_contents($urlmd);
 }
 else {
 
-	$filename = ain (
-		$_GET, 'filename', ain(
-			$_POST, 'filename', NULL
+	$title = ain (
+		$_GET, 'title', ain(
+			$_POST, 'title', NULL
 		)
 	);
 
@@ -51,9 +51,9 @@ else {
 		)
 	);
 
-	if (is_null($filename) && is_null($markdown)) {
-		$filename = 'README.md';
-		$markdown = load($filename);
+	if (is_null($title) && is_null($markdown)) {
+		$title = 'README.md';
+		$markdown = load($title);
 	}
 }
 
@@ -77,7 +77,7 @@ $content .= <<<"HEREDOC"
 
 	<meta charset="utf-8" />
 
-	<title>{$__html( $filename )}</title>
+	<title>{$__html( $title )}</title>
 
 	<link type="text/css" rel="stylesheet" href="/includes/commons5.css" />
 
@@ -120,7 +120,7 @@ $content .= <<<"HEREDOC"
 <div id="readme" class="readme boxed-group clearfix announce instapaper_body md">
     <h3>
 		<svg aria-hidden="true" class="octicon octicon-book" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"></path></svg>
-		{$__html( $filename )}
+		{$__html( $title )}
     </h3>
 
 	<article class="markdown-body entry-content" itemprop="text">
